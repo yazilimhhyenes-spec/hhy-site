@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
 import { Route as PrivateLabelRouteImport } from './routes/private-label'
+import { Route as OurBrandsRouteImport } from './routes/our-brands'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as FacilitiesRouteImport } from './routes/facilities'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -25,6 +26,11 @@ const WhatWeDoRoute = WhatWeDoRouteImport.update({
 const PrivateLabelRoute = PrivateLabelRouteImport.update({
   id: '/private-label',
   path: '/private-label',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurBrandsRoute = OurBrandsRouteImport.update({
+  id: '/our-brands',
+  path: '/our-brands',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InsightsRoute = InsightsRouteImport.update({
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/facilities': typeof FacilitiesRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/our-brands': typeof OurBrandsRoute
   '/private-label': typeof PrivateLabelRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/insights/$articleId': typeof InsightsArticleIdRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/facilities': typeof FacilitiesRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/our-brands': typeof OurBrandsRoute
   '/private-label': typeof PrivateLabelRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/insights/$articleId': typeof InsightsArticleIdRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/facilities': typeof FacilitiesRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/our-brands': typeof OurBrandsRoute
   '/private-label': typeof PrivateLabelRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/insights/$articleId': typeof InsightsArticleIdRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/facilities'
     | '/insights'
+    | '/our-brands'
     | '/private-label'
     | '/what-we-do'
     | '/insights/$articleId'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/facilities'
     | '/insights'
+    | '/our-brands'
     | '/private-label'
     | '/what-we-do'
     | '/insights/$articleId'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/facilities'
     | '/insights'
+    | '/our-brands'
     | '/private-label'
     | '/what-we-do'
     | '/insights/$articleId'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FacilitiesRoute: typeof FacilitiesRoute
   InsightsRoute: typeof InsightsRouteWithChildren
+  OurBrandsRoute: typeof OurBrandsRoute
   PrivateLabelRoute: typeof PrivateLabelRoute
   WhatWeDoRoute: typeof WhatWeDoRoute
 }
@@ -134,6 +147,13 @@ declare module '@tanstack/react-router' {
       path: '/private-label'
       fullPath: '/private-label'
       preLoaderRoute: typeof PrivateLabelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-brands': {
+      id: '/our-brands'
+      path: '/our-brands'
+      fullPath: '/our-brands'
+      preLoaderRoute: typeof OurBrandsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insights': {
@@ -191,6 +211,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FacilitiesRoute: FacilitiesRoute,
   InsightsRoute: InsightsRouteWithChildren,
+  OurBrandsRoute: OurBrandsRoute,
   PrivateLabelRoute: PrivateLabelRoute,
   WhatWeDoRoute: WhatWeDoRoute,
 }
