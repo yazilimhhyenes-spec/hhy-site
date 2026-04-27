@@ -20,7 +20,7 @@ import enderLogo from "@/assets/Logos/ender-chocolate.svg";
 import snackBantLogo from "@/assets/Logos/snack-bant-logo.avif";
 import kayihanLogo from "@/assets/Logos/YILDIZ SU-01.png";
 import munchLogo from "@/assets/Logos/MUNCH MASTER_LOGO-01.png";
-import dedemLogo from "@/assets/Logos/DEDEM KURUYEMİS_LOGO-01.png";
+import dedemLogo from "@/assets/Logos/dedem-kuruyemis-logo.png";
 import santinoLogo from "@/assets/Logos/SANTINO_LOGO-01.png";
 import indigoLogo from "@/assets/Logos/INDIGO_LOGO-01.png";
 import { Counter } from "@/components/Counter";
