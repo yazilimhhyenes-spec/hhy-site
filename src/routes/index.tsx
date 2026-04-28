@@ -42,9 +42,24 @@ export const Route = createFileRoute("/")({
 });
 
 const SERVICES = [
-  { step: "01", title: "Sustainable Agricultural Operations", desc: "Managing over 10 million square meters of fertile farmland across Manisa and Ankara. We cultivate premium walnuts, almonds, and vineyards using advanced, eco-friendly farming technologies.", img: agriAreasImg },
-  { step: "02", title: "Chocolate & Confectionery Production", desc: "Operating a massive BRC and HACCP-certified manufacturing complex. Our high-capacity lines produce premium filled chocolates, couverture, and wafers tailored for global industrial buyers.", img: chocFactoryImg },
-  { step: "03", title: "Industrial Nut Processing", desc: "Our 10,000 m² specialized facility manages high-volume roasting, seasoning, and packaging. We process premium almonds, cashews, and peanuts under strict international food safety regimes.", img: nutProcessingImg },
+  {
+    step: "01",
+    title: "Private Label Product Development",
+    desc: "From concept development and custom formulations to ingredient sourcing and product specifications, we help brands create market-ready chocolate, protein bar, wafer, and nut product ranges.",
+    img: productsImg,
+  },
+  {
+    step: "02",
+    title: "Chocolate, Wafer & Protein Bar Production",
+    desc: "Our HACCP-controlled production lines manufacture chocolate bars, filled chocolates, coated wafers, protein bars, and snack bars with scalable capacity for retailers and distributors.",
+    img: chocFactoryImg,
+  },
+  {
+    step: "03",
+    title: "Nut Processing, Packaging & Export",
+    desc: "We process raw, roasted, coated, sauced, and mixed nut products with retail-ready packaging, batch traceability, export documentation, and logistics support for international private label orders.",
+    img: nutProcessingImg,
+  },
 ];
 
 const CERTS = [
@@ -324,13 +339,13 @@ function HomePage() {
           <div className="grid grid-cols-12 gap-8 mb-16">
             <div className="col-span-12 md:col-span-4">
               <span className="rule-gold mb-6" />
-              <div className="eyebrow mt-6">What We Do</div>
+              <div className="eyebrow mt-6">Private Label Capabilities</div>
             </div>
             <div className="col-span-12 md:col-span-8">
               <h2 className="font-display text-3xl md:text-5xl tracking-tight leading-[1.05]">
-                Core Services and
+                End-to-end OEM
                 <br />
-                <span className="text-white/55">Production Facilities.</span>
+                <span className="text-white/55">production for your brand.</span>
               </h2>
             </div>
           </div>
